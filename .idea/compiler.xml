@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Projektskabelon-master" />
+        <module name="cupcake-project" />
         <module name="Projektskabelon" />
         <module name="ProjektSkabelon-master" />
-        <module name="Cupcake-project" />
         <module name="prejektSkabelon" />
+        <module name="Cupcake-project" />
+        <module name="Projektskabelon-master" />
       </profile>
     </annotationProcessing>
   </component>
@@ -20,6 +21,7 @@
       <module name="ProjektSkabelon-master" options="-endorseddirs &quot;$PROJECT_DIR$/target/endorsed&quot;" />
       <module name="Projektskabelon" options="-endorseddirs &quot;$PROJECT_DIR$/target/endorsed&quot;" />
       <module name="Projektskabelon-master" options="-endorseddirs $PROJECT_DIR$/target/endorsed" />
+      <module name="cupcake-project" options="-endorseddirs $PROJECT_DIR$/target/endorsed" />
       <module name="prejektSkabelon" options="-endorseddirs &quot;$PROJECT_DIR$/target/endorsed&quot;" />
     </option>
   </component>
