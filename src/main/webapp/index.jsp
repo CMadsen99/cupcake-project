@@ -2,7 +2,41 @@
 <%@include file="includes/header.inc"%>
 
 
-<h1 class="text-center">BMI beregner</h1>
+<h1 class="text-center mt-4">Welkommen til Olskers Cupcakes</h1>
+
+
+
+<div class="btn-group">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vælg bund</button>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+</div><!-- /btn-group -->    <div class="btn-group">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vælg topping</button>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+</div><!-- /btn-group -->    <div class="btn-group">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vælg antal</button>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+</div><!-- /btn-group -->
+
+
+
 
 <div class="row">
 
@@ -17,7 +51,7 @@
             <input type="hidden" name="taget" value="resultat"/>
 
             <div class="form-group">
-                <label for="height">Indtast din højde i cm:</label>
+                <label for="height"> din højde i cm:</label>
                 <input type="text" name="height" class="form-control" id="height" aria-describedby="heightHelp">
                 <small id="heightHelp" class="form-text text-muted">Husk det er centimeter!!!</small>
             </div>
