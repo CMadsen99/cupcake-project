@@ -7,7 +7,7 @@
 
 
 <div class="btn-group">
-    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vælg bund</button>
+    <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vælg bund</button>
     <div class="dropdown-menu">
         <a class="dropdown-item" href="#">Action</a>
         <a class="dropdown-item" href="#">Another action</a>
@@ -16,7 +16,7 @@
         <a class="dropdown-item" href="#">Separated link</a>
     </div>
 </div><!-- /btn-group -->    <div class="btn-group">
-    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vælg topping</button>
+    <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vælg topping</button>
     <div class="dropdown-menu">
         <a class="dropdown-item" href="#">Action</a>
         <a class="dropdown-item" href="#">Another action</a>
@@ -25,7 +25,7 @@
         <a class="dropdown-item" href="#">Separated link</a>
     </div>
 </div><!-- /btn-group -->    <div class="btn-group">
-    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vælg antal</button>
+    <button type="button" class="btn btn-outline-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vælg antal</button>
     <div class="dropdown-menu">
         <a class="dropdown-item" href="#">Action</a>
         <a class="dropdown-item" href="#">Another action</a>
