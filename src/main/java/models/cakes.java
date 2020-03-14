@@ -3,17 +3,20 @@ package models;
 public class cakes {
     private String topping;
     private String bottom;
-    private String name;
+    private String productname;
     private int price;
 
-    public cakes(String topping, String bottom, String name, int price) {
+    public cakes(String topping, String bottom, String productname, int price) {
         this.topping = topping;
         this.bottom = bottom;
-        this.name = name;
+        this.productname = productname;
         this.price = price;
     }
 
- public String getTopping() { return topping;}
+    public cakes(String productname, String topping, int price) {
+    }
+
+    public String getTopping() { return topping;}
 
     public void setTopping(String topping) {
         this.topping = topping;
@@ -27,12 +30,12 @@ public class cakes {
         this.bottom = bottom;
     }
 
-    public String getName() {
-        return name;
+    public String getProductname() {
+        return productname;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setProductname(String productname) {
+        this.productname = productname;
     }
 
     public int getPrice() {
@@ -48,7 +51,7 @@ public class cakes {
         return "cakes{" +
                 "topping='" + topping + '\'' +
                 ", bottom='" + bottom + '\'' +
-                ", name='" + name + '\'' +
+                ", productname='" + productname + '\'' +
                 ", price=" + price +
                 '}';
     }
