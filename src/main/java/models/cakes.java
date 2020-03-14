@@ -13,9 +13,7 @@ public class cakes {
         this.price = price;
     }
 
-    public String getTopping() {
-        return topping;
-    }
+ public String getTopping() { return topping;}
 
     public void setTopping(String topping) {
         this.topping = topping;
