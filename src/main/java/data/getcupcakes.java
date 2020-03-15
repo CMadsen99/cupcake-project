@@ -35,8 +35,6 @@ public class getcupcakes {
         resultSet.close();
         statement.close();
         myConnector.close();
-        HttpSession session = request.getSession();
-        session.setAttribute("topping", returnList);
 
         return returnList;
     }

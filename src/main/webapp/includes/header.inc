@@ -28,7 +28,7 @@
             <a style="color:white" ;="" class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" style="color:white">Features</a>
+            <a class="nav-link" href="signin.jsp" style="color:white">login/registrer</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="basket.jsp" style="color:white">kurv</a>
