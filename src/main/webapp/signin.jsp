@@ -13,7 +13,6 @@
 
     <div class="col-lg-4">
 
-        Her er et link til <a class="mb-4 mt-4" href="signUp.jsp">resultatsiden</a>
 
         <form action="FrontController" method="post">
 
@@ -27,6 +26,10 @@
             <div class="form-group">
                 <label for="passsword">intast password:</label>
                 <input type="password" name="password" class="form-control" id="passsword">
+            </div>
+
+            <div style="text-align: center">
+                Hvis du ikke er medlem  <a href="signUp.jsp" class="button large hpbottom">registrer her:</a>
             </div>
 
             <div class="text-center">

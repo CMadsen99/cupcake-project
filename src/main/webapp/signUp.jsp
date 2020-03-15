@@ -13,11 +13,16 @@
 
     <div class="col-lg-4">
 
-        Her er et link til <a class="mb-4 mt-4" href="signUp.jsp">resultatsiden</a>
 
         <form action="FrontController" method="post">
 
             <input type="hidden" name="taget" value="resultat"/>
+
+            <div class="form-group">
+                <label for="name">Intast navn:</label>
+                <input type="text" name="name" class="form-control" id="name">
+
+            </div>
 
             <div class="form-group">
                 <label for="email">intast e-mail:</label>
@@ -30,7 +35,7 @@
             </div>
 
             <div class="text-center">
-                <button type="submit" class="btn btn-primary mt-4">Login</button>
+                <button type="submit" class="btn btn-primary mt-4">Register</button>
             </div>
         </form>
     </div>
