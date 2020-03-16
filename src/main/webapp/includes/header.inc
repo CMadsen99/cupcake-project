@@ -30,12 +30,9 @@
           <li class="nav-item">
             <a class="nav-link" href="signin.jsp" style="color:white">Login/Registrer</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="WEB-INF/basket.jsp" style="color:white">Kurv</a>
-          </li>
         </ul>
-        <span class="navbar-text">
-          Navbar text with an inline element
-        </span>
+        <a class="navbar-brand" href="basket.jsp">
+                 <img src="images/basket.png" alt="basket.jsp">
+               </a>
       </div>
     </nav>
