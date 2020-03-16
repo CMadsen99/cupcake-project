@@ -28,10 +28,10 @@
             <a style="color:white" ;="" class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="signin.jsp" style="color:white">Login/Registrer</a>
+            <a class="nav-link" href="FrontController?taget=redirect&destination=signin" style="color:white">Login/Registrer</a>
           </li>
         </ul>
-        <a class="navbar-brand" href="basket.jsp">
+        <a class="navbar-brand" href="FrontController?taget=redirect&destination=basket">
                  <img src="images/basket.png" alt="basket.jsp">
                </a>
       </div>

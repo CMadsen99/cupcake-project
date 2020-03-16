@@ -1,19 +1,19 @@
-package models;
+package FunctionLayer;
 
-public class cakes {
+public class Cake {
     private String topping;
     private String bottom;
     private String productname;
     private int price;
 
-    public cakes(String topping, String bottom, String productname, int price) {
+    public Cake(String topping, String bottom, String productname, int price) {
         this.topping = topping;
         this.bottom = bottom;
         this.productname = productname;
         this.price = price;
     }
 
-    public cakes(String productname, String topping, int price) {
+    public Cake(String productname, String topping, int price) {
     }
 
     public String getTopping() { return topping;}
