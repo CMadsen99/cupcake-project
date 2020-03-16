@@ -7,7 +7,7 @@
 --%>
 <title>Kurv</title>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@include file="includes/header.inc"%>
+<%@include file="../includes/header.inc"%>
 
 <h1 class="text-center mt-4">Din inkøbskurv:</h1>
 

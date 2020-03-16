@@ -1,9 +1,10 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <title>Cupcake projekt</title>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="includes/header.inc"%>
 
 
-<h1 class="text-center mt-4">Welkommen til Olskers Cupcakes</h1>
+<h1 class="text-center mt-4">Velkommen til Olskers Cupcakes</h1>
 
 
 
@@ -40,6 +41,11 @@
     </div>
 </div><!-- /btn-group -->
 
+<c:if test = "${requestScope.error!= null}" >
 
+    <h2>Error ! </h2>
+    ${requestScope.error}
+
+</c:if>
 
 <%@include file="includes/footer.inc"%>

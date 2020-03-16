@@ -28,10 +28,10 @@
             <a style="color:white" ;="" class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="signin.jsp" style="color:white">login/registrer</a>
+            <a class="nav-link" href="signin.jsp" style="color:white">Login/Registrer</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="basket.jsp" style="color:white">kurv</a>
+            <a class="nav-link" href="WEB-INF/basket.jsp" style="color:white">Kurv</a>
           </li>
         </ul>
         <span class="navbar-text">

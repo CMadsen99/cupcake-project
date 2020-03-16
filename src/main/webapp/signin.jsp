@@ -14,17 +14,22 @@
     <div class="col-lg-4">
 
 
-        <form action="FrontController" method="post">
+        <form name="login" action="FrontController" method="POST">
 
-            <input type="hidden" name="taget" value="resultat"/>
+            <input type="hidden" name="taget" value="login"/>
 
             <div class="form-group">
-                <label for="email">intast e-mail:</label>
-                <input type="text" name="email" class="form-control" id="email">
-
+                <label for="name">Indtast navn:</label>
+                <input type="text" name="name" class="form-control" id="name">
             </div>
+
             <div class="form-group">
-                <label for="passsword">intast password:</label>
+                <label for="email">Indtast e-mail:</label>
+                <input type="text" name="email" class="form-control" id="email">
+            </div>
+
+            <div class="form-group">
+                <label for="passsword">Indtast password:</label>
                 <input type="password" name="password" class="form-control" id="passsword">
             </div>
 
