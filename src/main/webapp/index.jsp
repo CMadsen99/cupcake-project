@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <title>Cupcake projekt</title>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@include file="includes/header.inc"%>
+<%@include file="includes/header.jsp"%>
 
 
 <h1 class="text-center mt-4">Velkommen til Olskers Cupcakes</h1>
@@ -18,6 +18,7 @@
         <a class="dropdown-item" href="#">Separated link</a>
     </div>
 </div><!-- /btn-group -->
+
 
 <div class="btn-group">
     <button type="button" class="btn btn-outline-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vælg topping</button>
@@ -41,6 +42,7 @@
     </div>
 </div><!-- /btn-group -->
 
+
 <c:if test = "${requestScope.error!= null}" >
 
     <h2>Error ! </h2>
@@ -48,4 +50,4 @@
 
 </c:if>
 
-<%@include file="includes/footer.inc"%>
+<%@include file="includes/footer.jsp"%>
