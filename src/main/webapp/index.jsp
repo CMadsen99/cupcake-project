@@ -1,10 +1,35 @@
+<%@ page import="FunctionLayer.Toppings" %>
+<%@ page import="FunctionLayer.Bottoms" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <title>Cupcake projekt</title>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="includes/header.jsp"%>
 
+<%!
+
+    @Override
+    public void jspInit() {
+        Toppings.initToppings();
+        Bottoms.initToppings();
+    }
+
+%>
+
+<%
+
+    request.setAttribute("toppings", Toppings.getToppings());
+    request.setAttribute("bottoms", Bottoms.getBottoms());
+
+%>
+
 
 <h1 class="text-center mt-4">Velkommen til Olskers Cupcakes</h1>
+
+<ul>
+    <c:forEach var="topping" items="${toppings}">
+        <li>${topping.name} ${topping.price}</li>
+    </c:forEach>
+</ul>
 
 
 

@@ -34,7 +34,6 @@ public class FrontController extends HttpServlet {
         try {
             Command action = Command.from( request );
             String view = action.execute( request, response );
-            //TODO tilføj igen "/WEB-INF/" +
             if (view.equals("index")) {
                 request.getRequestDispatcher(view + ".jsp").forward(request, response);
             } else {
