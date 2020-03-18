@@ -25,7 +25,7 @@
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
            <li class="nav-item">
-                      <a class="nav-link" href="adminpage.jsp" style="color:white">kundeoplysninger</a>
+                      <a class="nav-link" href="FrontController?taget=redirect&destination=adminpage" style="color:white">Kundeoplysninger</a>
                     </li>
             <%if ((session.getAttribute("email") != null)) { %>
                 <li class="nav-item">

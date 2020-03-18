@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="../includes/headercostumer.inc"%>
 
-<h1 class="text-center mt-4">Din inkøbskurv:</h1>
+<h1 class="text-center mt-4">Din indkøbskurv:</h1>
 
 <table class="text-center mt-4" style="width:100%">
     <th>

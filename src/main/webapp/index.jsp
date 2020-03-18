@@ -44,7 +44,6 @@
     </c:forEach>
 </ul>
 
-${sessionScope.role}
 
 
 
