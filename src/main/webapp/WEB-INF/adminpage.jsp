@@ -28,7 +28,7 @@
 
 %>
 
-<table class="table mt-4">
+<table class="table">
     <thead>
     <tr>
         <th scope="col">Bruger ID</th>
@@ -36,19 +36,19 @@
         <th scope="col">Email</th>
         <th scope="col">Ordrehistorik</th>
         <th scope="col">Rediger kunde</th>
-
-    <a href="FrontController?taget=redirect&destination=editUser" class="stretched-link">Rediger kunnde</a>
-        <br>
-    <a href="FrontController?taget=redirect&destination=orderHistory" class="stretched-link">Orderhistorik</a>
     </tr>
     </thead>
     <tbody>
-    <tr></tr>
-    <c:forEach var="userList" items="${userList}">
-        <li>${userList.id} ${userList.name} ${userList.email}</li>
-    </c:forEach>
+<c:forEach var="userList" items="${userList}">
+    <tr>
+        <th scope="row">${userList.id}</th>
+        <td>${userList.name}</td>
+        <td>${userList.email}</td>
+        <td><a href="FrontController?taget=redirect&destination=orderHistory" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Orderhistorik</a></td>
+        <td><a href="FrontController?taget=redirect&destination=editUser" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Rediger kunde</a></td>
+    </tr>
+</c:forEach>
     </tbody>
 </table>
-
 
 

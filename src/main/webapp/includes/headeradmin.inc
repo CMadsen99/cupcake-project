@@ -29,7 +29,7 @@
                     </li>
             <%if ((session.getAttribute("email") != null)) { %>
                 <li class="nav-item">
-                    <a class="nav-link" href="FrontController?taget=redirect&destination=signin" style="color:white">${sessionScope.email}</a>
+                    ${sessionScope.email}
                 </li>
      <% } else { %>
              <li class="nav-item">
