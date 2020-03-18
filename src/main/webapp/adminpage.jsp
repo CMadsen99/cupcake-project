@@ -24,7 +24,9 @@
     </thead>
     <tbody>
     <tr></tr>
-
+    <c:forEach var="topping" items="${toppings}">
+        <li>${topping.name} ${topping.price}</li>
+    </c:forEach>
     </tbody>
 </table>
 
