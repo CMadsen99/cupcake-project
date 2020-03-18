@@ -1,6 +1,6 @@
 <title>Cupcake projekt</title>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@include file="../includes/header.jsp"%>
+<%@include file="../includes/headercostumer.inc"%>
 
 
 <h1 class="text-center mt-4">Login her:</h1>
@@ -36,6 +36,15 @@
             <div style="text-align: center">
                 Hvis du ikke er medlem  <a href="FrontController?taget=redirect&destination=signUp" class="button large hpbottom">registrer her:</a>
             </div>
+            <c:choose>
+                <c:when test="${sessionScope.role=='admin'}">
+                    <a class="btn btn-primary" href="indexadmin.jsp" role="button">Link</a>
+                </c:when>
+                <c:otherwise>
+                    <a class="btn btn-primary" href="index.jsp" role="button">Link</a>
+                </c:otherwise>
+            </c:choose>
+            <a class="btn btn-primary" href="#" role="button">Link</a>
 
             <div class="text-center">
                 <button type="submit" class="btn btn-primary mt-4">Login</button>
