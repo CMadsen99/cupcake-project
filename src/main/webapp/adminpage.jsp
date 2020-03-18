@@ -20,6 +20,9 @@
         <th scope="col">Email</th>
         <th scope="col">Ordrehistorik</th>
         <th scope="col">Rediger kunde</th>
+
+    <a href="editUser.jsp" class="stretched-link">Rediger kunnde</a>
+        <a href="orderHistory.jsp" class="stretched-link">orderhistorik</a>
     </tr>
     </thead>
     <tbody>
