@@ -18,15 +18,15 @@
     <img src="images/headbanner.png" class="img-fluid mb-4"/>
 
 <nav class="navbar navbar-expand-lg navbar btn-dark">
-      <a class="navbar-brand" href="indexadmin.jsp" style="color:white">Home dssdsdsds</a>
+      <a class="navbar-brand" href="indexadmin.jsp" style="color:white">Home</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a style="color:white" ;="" class="nav-link" href="#"><span class="sr-only">(current)</span></a>
-          </li>
+           <li class="nav-item">
+                      <a class="nav-link" href="adminpage.jsp" style="color:white">kundeoplysninger</a>
+                    </li>
             <%if ((session.getAttribute("email") != null)) { %>
                 <li class="nav-item">
                     <a class="nav-link" href="FrontController?taget=redirect&destination=signin" style="color:white">${sessionScope.email}</a>

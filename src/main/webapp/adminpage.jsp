@@ -12,3 +12,21 @@
     </c:otherwise>
 </c:choose>
 
+<table class="table mt-4">
+    <thead>
+    <tr>
+        <th scope="col">Bruger ID</th>
+        <th scope="col">Navn</th>
+        <th scope="col">Email</th>
+        <th scope="col">Ordrehistorik</th>
+        <th scope="col">Rediger kunde</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr></tr>
+
+    </tbody>
+</table>
+
+
+
