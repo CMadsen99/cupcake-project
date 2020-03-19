@@ -40,12 +40,23 @@
     </thead>
     <tbody>
 <c:forEach var="userList" items="${userList}">
+    <%!%>
     <tr>
         <th scope="row">${userList.id}</th>
         <td>${userList.name}</td>
         <td>${userList.email}</td>
-        <td><a href="FrontController?taget=redirect&destination=orderHistory" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Orderhistorik</a></td>
-        <td><a href="FrontController?taget=redirect&destination=editUser" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Rediger kunde</a></td>
+        <td><form name="orderview" action="FrontController" method="POST">
+            <input type="hidden" name="taget" value="orderview">
+            <input type="hidden" name="idOrder" value="${userList.id}">
+
+            <input type="submit" value="Ordrehistorik">
+        </form></td>
+        <td><form name="editPage" action="FrontController" method="POST">
+            <input type="hidden" name="taget" value="editPage">
+            <input type="hidden" name="idEdit" value="${userList.id}">
+
+            <input type="submit" value="Rediger kunde">
+        </form></td>
     </tr>
 </c:forEach>
     </tbody>

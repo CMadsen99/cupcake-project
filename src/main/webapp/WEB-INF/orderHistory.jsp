@@ -12,5 +12,10 @@
     </c:otherwise>
 </c:choose>
 order history
+<br>
+<c:forEach var="orderList" items="${sessionScope.orderList}">
+    ${orderList.order_id} ${orderList.user_id} ${orderList.cost} ${orderList.paid}
+    <br>
+</c:forEach>
 </body>
 </html>

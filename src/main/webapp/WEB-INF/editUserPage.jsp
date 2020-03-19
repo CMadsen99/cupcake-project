@@ -11,7 +11,22 @@
         <%@include file="../includes/headercostumer.inc"%>
     </c:otherwise>
 </c:choose>
-rediger kunde
+
+Kundens balance er ${sessionScope.balance}
+<br>
+
+Tilføj penge til kundens konto
+<br>
+${sessionScope.msg}
+<br>
+<form name="edit" action="FrontController" method="POST">
+    <input type="hidden" name="taget" value="edit">
+    Indtast beløb:<br>
+    <input type="number" name="amount">
+    <br>
+
+    <input type="submit" value="Submit">
+</form>
 
 </body>
 </html>

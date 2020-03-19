@@ -81,4 +81,36 @@ public class UserMapper {
         }
     }
 
+    public static void updateBalance(int amount, int userID) throws LoginSampleException {
+        try {
+            Connection con = Connector.connection();
+            String SQL = "UPDATE cupcake.users SET balance = balance + ? WHERE user_id = ?";
+            PreparedStatement ps = con.prepareStatement(SQL);
+            ps.setInt(1, amount);
+            ps.setInt(2, userID);
+            ps.executeUpdate();
+
+        } catch ( ClassNotFoundException | SQLException ex ) {
+            throw new LoginSampleException(ex.getMessage());
+        }
+    }
+
+    public static int getBalance(int userID) throws LoginSampleException {
+        int balance = 0;
+        try {
+            Connection con = Connector.connection();
+            String SQL = "SELECT balance FROM cupcake.users WHERE user_id = ?";
+            PreparedStatement ps = con.prepareStatement( SQL );
+            ps.setInt( 1, userID );
+            ResultSet rs = ps.executeQuery();
+            if ( rs.next() ) {
+                balance = rs.getInt("balance");
+                return balance;
+            }
+            return balance;
+        } catch ( ClassNotFoundException | SQLException ex ) {
+            throw new LoginSampleException(ex.getMessage());
+        }
+    }
+
 }
