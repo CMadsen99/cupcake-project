@@ -18,7 +18,7 @@
     <img src="images/headbanner.png" class="img-fluid mb-4"/>
 
 <nav class="navbar navbar-expand-lg navbar btn-dark">
-      <a class="navbar-brand" href="indexadmin.jsp" style="color:white">Home</a>
+      <a class="navbar-brand" href="index.jsp" style="color:white">Home</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -28,8 +28,8 @@
                       <a class="nav-link" href="FrontController?taget=redirect&destination=adminpage" style="color:white">Kundeoplysninger</a>
                     </li>
             <%if ((session.getAttribute("email") != null)) { %>
-                <li class="nav-item">
-                    ${sessionScope.email}
+                <li class="nav-item mt-7">
+                  ${sessionScope.email}
                 </li>
      <% } else { %>
              <li class="nav-item">

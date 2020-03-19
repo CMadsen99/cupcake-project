@@ -13,10 +13,14 @@
 
 <table class="text-center mt-4" style="width:100%">
     <th>
-        <th>#</th> <!-- antal bestemmelse med hvor mange ting der er i kurv -->
-        <th><h5>Bund</h5></th>
-        <th><h3>Topping</h3></th>
+    <th><h4>#</h4></th> <!-- antal bestemmelse med hvor mange ting der er i kurv -->
+        <th><h4>Bund</h4></th>
+        <th><h4>Topping</h4></th>
         <th><h4>Antal</h4></th>
+
+    <c:forEach var="topping" items="${toppings}">
+        <li>${topping.name} ${topping.price}</li>
+    </c:forEach>
     </th>
 </table>
 <h4>Pris ialt</h4>

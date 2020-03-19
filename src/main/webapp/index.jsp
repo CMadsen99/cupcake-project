@@ -46,40 +46,59 @@
 
 
 
+<form name="cupcake" method="post" action="#">
+    <div class="btn-group">
+        <select name="topping" class="mdb-select md-form">
+            <option value="" disabled selected>Vælg din Topping</option>
+            <c:forEach var="topping" items="${toppings}">
+                <option value="${topping.name} ${topping.price}" datatype="${topping.price}"">${topping.name} ${topping.price}</option>
+            </c:forEach>
+        </select>
+    </div><!-- /btn-group -->
 
-<div class="btn-group">
-    <button type="button" class="btn btn-outline-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vælg bund</button>
-    <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Separated link</a>
-    </div>
+
+    <div class="btn-group">
+        <select name="bottom" class="mdb-select md-form">
+            <option value="" disabled selected>Vælg din Bund</option>
+            <c:forEach var="bottom" items="${bottoms}">
+                <option value="${bottom.name} ${bottom.price}" datatype="${bottom.price}"">${bottom.name} ${bottom.price}</option>
+            </c:forEach>
+        </select>
+
+        <div class="btn-group">
+            <select name="quantity" class="mdb-select md-form">
+                <option value="" disabled selected>Vælg Antal</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+        <br>
+    <input type="submit" name="submit" value="Select cupcake"/>
+        
+
+
+    <%
+        String top=request.getParameter("topping");
+        String bottom=request.getParameter("bottom");
+        String quantity =request.getParameter("quantity");
+        if (top + bottom !=null)
+        {
+            out.println("Selected Cupcake is : " + top + " " + bottom + " " + quantity  );
+        } else {
+            out.println("du har ikke valgt nogle cupcake");
+        }
+    %>
 </div><!-- /btn-group -->
+</form>
 
-
-<div class="btn-group">
-    <button type="button" class="btn btn-outline-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vælg topping</button>
-    <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Separated link</a>
-    </div>
-</div><!-- /btn-group -->
-
-<div class="btn-group">
-    <button type="button" class="btn btn-outline-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vælg antal</button>
-    <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Separated link</a>
-    </div>
-</div><!-- /btn-group -->
 
 
 <c:if test = "${requestScope.error!= null}" >
