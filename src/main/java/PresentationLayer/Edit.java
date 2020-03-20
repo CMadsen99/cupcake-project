@@ -11,21 +11,16 @@ public class Edit extends Command {
     @Override
     String execute(HttpServletRequest request, HttpServletResponse response) throws LoginSampleException {
 
-        HttpSession session = request.getSession();
-
-        int user_id = (int) request.getAttribute("userID");
+        int user_id = Integer.parseInt(request.getParameter("IDUser2"));
         int amount = Integer.parseInt(request.getParameter("amount"));
-
-        int balance = UserMapper.getBalance(user_id);
-        session.setAttribute("balance", balance);
 
         if (amount > 0) {
             UserMapper.updateBalance(amount, user_id);
-            session.setAttribute("msg", "Beløbet er blevet tilføjet");
+            return "adminpage";
         } else {
-            session.setAttribute("msg", "Beløbet blev ikke tilføjet");
+            request.setAttribute("msg", "Beløbet blev ikke tilføjet");
+            return "editUserPage";
         }
 
-        return "editUserPage";
     }
 }

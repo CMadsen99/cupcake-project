@@ -18,7 +18,7 @@
     <tr>
         <th scope="col">Order ID</th>
         <th scope="col">Kunde ID</th>
-        <th scope="col">Order pirs</th>
+        <th scope="col">Ordrepris</th>
         <th scope="col">Betalt</th>
     </tr>
     </thead>
@@ -36,9 +36,6 @@
 </table>
 
 <br>
-<c:forEach var="orderList" items="${sessionScope.orderList}">
-    ${orderList.order_id} ${orderList.user_id} ${orderList.cost} ${orderList.paid}
-    <br>
-</c:forEach>
+
 </body>
 </html>

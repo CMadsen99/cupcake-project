@@ -9,7 +9,7 @@ public class Bottoms {
 
     private static List<Bottom> bottoms;
 
-    public static void initToppings() {
+    public static void initBottoms() {
         if (bottoms == null) {
             bottoms = new ArrayList<>();
             try {

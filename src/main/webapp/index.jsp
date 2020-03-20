@@ -23,7 +23,7 @@
     @Override
     public void jspInit() {
         Toppings.initToppings();
-        Bottoms.initToppings();
+        Bottoms.initBottoms();
     }
 
 %>
@@ -46,12 +46,14 @@
 
 
 
-<form name="cupcake" method="post" action="#">
+<form name="cupcake" method="POST" action="FrontController">
+    <input type="hidden" name="taget" value="cupcake">
+
     <div class="btn-group">
         <select name="topping" class="mdb-select md-form">
             <option value="" disabled selected>Vælg din Topping</option>
             <c:forEach var="topping" items="${toppings}">
-                <option value="${topping.name} ${topping.price}" datatype="${topping.price}"">${topping.name} ${topping.price}</option>
+                <option value="${topping.name} ${topping.price}" datatype="${topping.price}">${topping.name} Pris: ${topping.price}</option>
             </c:forEach>
         </select>
     </div><!-- /btn-group -->
@@ -61,7 +63,7 @@
         <select name="bottom" class="mdb-select md-form">
             <option value="" disabled selected>Vælg din Bund</option>
             <c:forEach var="bottom" items="${bottoms}">
-                <option value="${bottom.name} ${bottom.price}" datatype="${bottom.price}"">${bottom.name} ${bottom.price}</option>
+                <option value="${bottom.name} ${bottom.price}" datatype="${bottom.price}">${bottom.name} Pris: ${bottom.price}</option>
             </c:forEach>
         </select>
 
@@ -81,7 +83,7 @@
             </select>
         </div>
         <br>
-    <input type="submit" name="submit" value="Select cupcake"/>
+    <input type="submit" name="submit" value="Vælg cupcake"/>
 
 
 
@@ -89,11 +91,12 @@
         String top=request.getParameter("topping");
         String bottom=request.getParameter("bottom");
         String quantity =request.getParameter("quantity");
-        if (top + bottom !=null)
+        
+        if (top + bottom != null)
         {
-            out.println("Selected Cupcake is : " + top + " " + bottom + " " + quantity  );
+            out.println("Den valgte cupcake er: " + top + " " + bottom + " Antal: " + quantity  );
         } else {
-            out.println("du har ikke valgt nogle cupcake");
+            out.println("Du har ikke valgt nogle cupcakes");
         }
     %>
 </div><!-- /btn-group -->

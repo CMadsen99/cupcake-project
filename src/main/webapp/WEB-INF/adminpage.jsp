@@ -40,7 +40,7 @@
     </thead>
     <tbody>
 <c:forEach var="userList" items="${userList}">
-    <%!%>
+
     <tr>
         <th scope="row">${userList.id}</th>
         <td>${userList.name}</td>

@@ -12,15 +12,24 @@
     </c:otherwise>
 </c:choose>
 
-Kundens balance er ${sessionScope.balance}
+Se kundens balance:
+<form name="showBalance" action="FrontController" method="POST">
+    <input type="hidden" name="taget" value="showBalance">
+    <input type="hidden" name="IDUser1" value="${sessionScope.userID}">
+    <input type="submit" value="Tryk her">
+</form>
+
+${requestScope.msgBalance}${requestScope.balance}
 <br>
 
 Tilføj penge til kundens konto
 <br>
-${sessionScope.msg}
 <br>
+${requestScope.msg}
+
 <form name="edit" action="FrontController" method="POST">
     <input type="hidden" name="taget" value="edit">
+    <input type="hidden" name="IDUser2" value="${sessionScope.userID}">
     Indtast beløb:<br>
     <input type="number" name="amount">
     <br>
