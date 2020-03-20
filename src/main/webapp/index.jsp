@@ -82,7 +82,7 @@
         </div>
         <br>
     <input type="submit" name="submit" value="Select cupcake"/>
-        
+
 
 
     <%
