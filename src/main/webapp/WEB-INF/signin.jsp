@@ -2,6 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="../includes/headercostumer.inc"%>
 
+<h1 class="text-center mt-4">${requestScope.orderMsg}</h1>
 
 <h1 class="text-center mt-4">Login her:</h1>
 

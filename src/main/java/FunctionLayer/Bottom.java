@@ -11,6 +11,12 @@ public class Bottom {
         this.price = price;
     }
 
+    public Bottom(int bottom_id, String name, int price) {
+        this.bottom_id = bottom_id;
+        this.name = name;
+        this.price = price;
+    }
+
     public int getBottom_id() {
         return bottom_id;
     }

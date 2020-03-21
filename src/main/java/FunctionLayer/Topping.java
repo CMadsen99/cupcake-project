@@ -11,6 +11,12 @@ public class Topping {
         this.price = price;
     }
 
+    public Topping(int topping_id, String name, int price) {
+        this.topping_id = topping_id;
+        this.name = name;
+        this.price = price;
+    }
+
     public int getTopping_id() {
         return topping_id;
     }

@@ -14,6 +14,12 @@ public class Order {
         this.paid = paid;
     }
 
+    public Order(int user_id, int cost, String paid) {
+        this.user_id = user_id;
+        this.cost = cost;
+        this.paid = paid;
+    }
+
     public int getOrder_id() {
         return order_id;
     }
