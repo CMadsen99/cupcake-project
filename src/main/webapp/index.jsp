@@ -38,36 +38,29 @@
 
 <h1 class="text-center mt-4">Velkommen til Olskers Cupcakes</h1>
 
-<ul>
-    <c:forEach var="topping" items="${toppings}">
-        <li>${topping.name} ${topping.price}</li>
-    </c:forEach>
-</ul>
 
-
-
-<form name="cupcakeBasket" method="POST" action="FrontController">
+<form class="mt-4" name="cupcakeBasket" method="POST" action="FrontController">
     <input type="hidden" name="taget" value="cupcakeBasket">
 
-    <div class="btn-group">
+    <table class="text-center mt-4" style="width:100%">
+        <th>
+        <th><div class="btn-group mt-4">
         <select name="topping" class="mdb-select md-form">
             <option value="" disabled selected>Vælg din Topping</option>
             <c:forEach var="topping" items="${toppings}">
                 <option value="${topping.topping_id}" datatype="${topping.price}">${topping.name} Pris: ${topping.price}</option>
             </c:forEach>
         </select>
-    </div><!-- /btn-group -->
-
-
-    <div class="btn-group">
-        <select name="bottom" class="mdb-select md-form">
-            <option value="" disabled selected>Vælg din Bund</option>
-            <c:forEach var="bottom" items="${bottoms}">
-                <option value="${bottom.bottom_id}" datatype="${bottom.price}">${bottom.name} Pris: ${bottom.price}</option>
-            </c:forEach>
-        </select>
-
-        <div class="btn-group">
+    </div></th> <!-- antal bestemmelse med hvor mange ting der er i kurv -->
+        <th><div class="btn-group mt-4">
+            <select name="bottom" class="mdb-select md-form">
+                <option value="" disabled selected>Vælg din Bund</option>
+                <c:forEach var="bottom" items="${bottoms}">
+                    <option value="${bottom.bottom_id}" datatype="${bottom.price}">${bottom.name} Pris: ${bottom.price}</option>
+                </c:forEach>
+            </select>
+        </div></th>
+        <th><div class="btn-group mt-4">
             <select name="quantity" class="mdb-select md-form">
                 <option value="" disabled selected>Vælg Antal</option>
                 <option value="1">1</option>
@@ -81,17 +74,15 @@
                 <option value="9">9</option>
                 <option value="10">10</option>
             </select>
-        </div>
-        <br>
-    <input type="submit" name="submit" value="Vælg cupcake"/>
+        </div></th>
+        <th><input class="mt-4" type="submit" name="submit" value="Vælg cupcake"/></th>
+        <th> <div class="mt-4"> ${requestScope.selection}</div></th>
+        </th>
+    </table>
 
-    ${requestScope.selection}
 
-
-</div><!-- /btn-group -->
+    </div><!-- /btn-group -->
 </form>
-
-
 
 <c:if test = "${requestScope.error!= null}" >
 
