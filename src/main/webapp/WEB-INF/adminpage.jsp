@@ -6,10 +6,10 @@
 
 <c:choose>
     <c:when test="${sessionScope.role=='admin'}">
-        <%@include file="../includes/headeradmin.inc"%>
+        <%@include file="../includes/headeradmin.inc" %>
     </c:when>
     <c:otherwise>
-        <%@include file="../includes/headercostumer.inc"%>
+        <%@include file="../includes/headercostumer.inc" %>
     </c:otherwise>
 </c:choose>
 
@@ -39,27 +39,31 @@
     </tr>
     </thead>
     <tbody>
-<c:forEach var="userList" items="${userList}">
+    <c:forEach var="userList" items="${userList}">
 
-    <tr>
-        <th scope="row">${userList.id}</th>
-        <td>${userList.name}</td>
-        <td>${userList.email}</td>
-        <td><form name="orderview" action="FrontController" method="POST">
-            <input type="hidden" name="taget" value="orderview">
-            <input type="hidden" name="idOrder" value="${userList.id}">
+        <tr>
+            <th scope="row">${userList.id}</th>
+            <td>${userList.name}</td>
+            <td>${userList.email}</td>
+            <td>
+                <form name="orderview" action="FrontController" method="POST">
+                    <input type="hidden" name="taget" value="orderview">
+                    <input type="hidden" name="idOrder" value="${userList.id}">
 
-            <input type="submit" value="Ordrehistorik">
-        </form></td>
-        <td><form name="editPage" action="FrontController" method="POST">
-            <input type="hidden" name="taget" value="editPage">
-            <input type="hidden" name="idEdit" value="${userList.id}">
+                    <input type="submit" value="Ordrehistorik">
+                </form>
+            </td>
+            <td>
+                <form name="editPage" action="FrontController" method="POST">
+                    <input type="hidden" name="taget" value="editPage">
+                    <input type="hidden" name="idEdit" value="${userList.id}">
 
-            <input type="submit" value="Rediger kunde">
-        </form></td>
-    </tr>
-</c:forEach>
+                    <input type="submit" value="Rediger kunde">
+                </form>
+            </td>
+        </tr>
+    </c:forEach>
     </tbody>
 </table>
 
-
+<%@include file="../includes/footer.jsp" %>

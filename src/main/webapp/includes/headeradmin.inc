@@ -18,7 +18,7 @@
     <img src="images/headbanner.png" class="img-fluid mb-4"/>
 
 <nav class="navbar navbar-expand-lg navbar btn-dark">
-      <a class="navbar-brand" href="index.jsp" style="color:white">Home</a>
+      <a class="navbar-brand" href="index.jsp" style="color:white">Forside</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -28,9 +28,14 @@
                       <a class="nav-link" href="FrontController?taget=redirect&destination=adminpage" style="color:white">Kundeoplysninger</a>
                     </li>
             <%if ((session.getAttribute("email") != null)) { %>
-                <li class="nav-item mt-7">
-                  ${sessionScope.email}
-                </li>
+             <li style="color:white" class="nav-item dropdown">
+                    <a style="color:white" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      ${sessionScope.email}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a style="color:red" class="dropdown-item" href="#">Logud</a>
+                    </div>
+                  </li>
      <% } else { %>
              <li class="nav-item">
             <a class="nav-link" href="FrontController?taget=redirect&destination=signin" style="color:white">Login/Registrer</a>

@@ -5,10 +5,10 @@
 
 <c:choose>
     <c:when test="${sessionScope.role=='admin'}">
-        <%@include file="../includes/headeradmin.inc"%>
+        <%@include file="../includes/headeradmin.inc" %>
     </c:when>
     <c:otherwise>
-        <%@include file="../includes/headercostumer.inc"%>
+        <%@include file="../includes/headercostumer.inc" %>
     </c:otherwise>
 </c:choose>
 
@@ -37,5 +37,4 @@ ${requestScope.msg}
     <input type="submit" value="Submit">
 </form>
 
-</body>
-</html>
+<%@include file="../includes/footer.jsp" %>

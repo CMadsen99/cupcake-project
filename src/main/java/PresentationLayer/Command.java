@@ -1,6 +1,7 @@
 package PresentationLayer;
 
 import FunctionLayer.LoginSampleException;
+
 import java.util.HashMap;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -11,26 +12,26 @@ abstract class Command {
 
     private static void initCommands() {
         commands = new HashMap<>();
-        commands.put( "login", new Login() );
-        commands.put( "register", new Register() );
-        commands.put( "redirect", new Redirect() );
-        commands.put( "orderview", new Orderview() );
-        commands.put( "editPage", new EditPage() );
-        commands.put( "edit", new Edit() );
-        commands.put( "showBalance", new ShowBalance() );
-        commands.put( "cupcakeBasket", new CupcakeBasket() );
-        commands.put( "payOrder", new PayOrder() );
+        commands.put("login", new Login());
+        commands.put("register", new Register());
+        commands.put("redirect", new Redirect());
+        commands.put("orderview", new Orderview());
+        commands.put("editPage", new EditPage());
+        commands.put("edit", new Edit());
+        commands.put("showBalance", new ShowBalance());
+        commands.put("cupcakeBasket", new CupcakeBasket());
+        commands.put("payOrder", new PayOrder());
     }
 
-    static Command from( HttpServletRequest request ) {
-        String TagetName = request.getParameter( "taget" );
-        if ( commands == null ) {
+    static Command from(HttpServletRequest request) {
+        String TagetName = request.getParameter("taget");
+        if (commands == null) {
             initCommands();
         }
-        return commands.getOrDefault(TagetName, new UnknownCommand() );   // unknowncommand er default.
+        return commands.getOrDefault(TagetName, new UnknownCommand());   // unknowncommand er default.
     }
 
-    abstract String execute( HttpServletRequest request, HttpServletResponse response ) 
+    abstract String execute(HttpServletRequest request, HttpServletResponse response)
             throws LoginSampleException;
 
 }

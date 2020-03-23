@@ -38,7 +38,7 @@ public class PayOrder extends Command {
 
             int maxOrderID = OrderMapper.getMaxOrderID();
 
-            for (CakeOrder c: (ArrayList<CakeOrder>)session.getAttribute("basket")) {
+            for (CakeOrder c : (ArrayList<CakeOrder>) session.getAttribute("basket")) {
                 int toppingID = CupcakeMapper.getToppingID(c.getToppingName());
                 int bottomID = CupcakeMapper.getBottomID(c.getBottomName());
                 int quantity = c.getQuantity();
@@ -47,7 +47,7 @@ public class PayOrder extends Command {
             }
 
             session.removeAttribute("totalPrice");
-            ((ArrayList<CakeOrder>)session.getAttribute("basket")).clear();
+            ((ArrayList<CakeOrder>) session.getAttribute("basket")).clear();
 
             return "index";
         } else {

@@ -1,3 +1,6 @@
+<%@ page import="FunctionLayer.Toppings" %>
+<%@ page import="FunctionLayer.Bottoms" %>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <title>Cupcake projekt</title>
 
@@ -5,21 +8,21 @@
 
 <c:choose>
     <c:when test="${sessionScope.role=='admin'}">
-        <%@include file="../includes/headeradmin.inc" %>
+        <%@include file="includes/headeradmin.inc" %>
     </c:when>
     <c:otherwise>
-        <%@include file="../includes/headercostumer.inc" %>
+        <%@include file="includes/headercostumer.inc" %>
     </c:otherwise>
 </c:choose>
-<h1 class="text-center mt-4">Ordre historik</h1>
+<h1 class="text-center mt-4">Order historik</h1>
 
 <table class="table">
     <thead>
     <tr>
         <th scope="col">Order ID</th>
-        <th scope="col">Kunde ID</th>
-        <th scope="col">Ordrepris</th>
-        <th scope="col">Betalt</th>
+        <th scope="col">Topping</th>
+        <th scope="col">Bund</th>
+        <th scope="col">Pris i alt</th>
     </tr>
     </thead>
     <tbody>
@@ -35,6 +38,4 @@
     </tbody>
 </table>
 
-<br>
-
-<%@include file="../includes/footer.jsp" %>
+<%@include file="includes/footer.jsp" %>
