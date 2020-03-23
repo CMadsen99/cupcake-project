@@ -25,7 +25,7 @@ public class CupcakeMapper {
                 toppings.add(topping);
             }
             return toppings;
-        } catch ( ClassNotFoundException | SQLException ex ) {
+        } catch (ClassNotFoundException | SQLException ex) {
             throw new LoginSampleException(ex.getMessage());
         }
     }
@@ -45,7 +45,7 @@ public class CupcakeMapper {
                 bottoms.add(bottom);
             }
             return bottoms;
-        } catch ( ClassNotFoundException | SQLException ex ) {
+        } catch (ClassNotFoundException | SQLException ex) {
             throw new LoginSampleException(ex.getMessage());
         }
     }
@@ -55,17 +55,17 @@ public class CupcakeMapper {
         try {
             Connection con = Connector.connection();
             String SQL = "SELECT product_name FROM cupcake.products WHERE product_id = ?";
-            PreparedStatement ps = con.prepareStatement( SQL );
-            ps.setInt( 1, productID );
+            PreparedStatement ps = con.prepareStatement(SQL);
+            ps.setInt(1, productID);
             ResultSet rs = ps.executeQuery();
-            if ( rs.next() ) {
+            if (rs.next()) {
                 name = rs.getString("product_name");
                 return name;
             } else {
                 return name;
             }
 
-        } catch ( ClassNotFoundException | SQLException ex ) {
+        } catch (ClassNotFoundException | SQLException ex) {
             throw new LoginSampleException(ex.getMessage());
         }
     }
@@ -75,17 +75,17 @@ public class CupcakeMapper {
         try {
             Connection con = Connector.connection();
             String SQL = "SELECT price FROM cupcake.products WHERE product_id = ?";
-            PreparedStatement ps = con.prepareStatement( SQL );
-            ps.setInt( 1, productID );
+            PreparedStatement ps = con.prepareStatement(SQL);
+            ps.setInt(1, productID);
             ResultSet rs = ps.executeQuery();
-            if ( rs.next() ) {
+            if (rs.next()) {
                 price = rs.getInt("price");
                 return price;
             } else {
                 return price;
             }
 
-        } catch ( ClassNotFoundException | SQLException ex ) {
+        } catch (ClassNotFoundException | SQLException ex) {
             throw new LoginSampleException(ex.getMessage());
         }
     }
@@ -95,17 +95,17 @@ public class CupcakeMapper {
         try {
             Connection con = Connector.connection();
             String SQL = "SELECT product_id FROM cupcake.products WHERE product_name = ? AND type = \"Bottom\"";
-            PreparedStatement ps = con.prepareStatement( SQL );
+            PreparedStatement ps = con.prepareStatement(SQL);
             ps.setString(1, productName);
             ResultSet rs = ps.executeQuery();
-            if ( rs.next() ) {
+            if (rs.next()) {
                 bottomID = rs.getInt("product_id");
                 return bottomID;
             } else {
                 return bottomID;
             }
 
-        } catch ( ClassNotFoundException | SQLException ex ) {
+        } catch (ClassNotFoundException | SQLException ex) {
             throw new LoginSampleException(ex.getMessage());
         }
     }
@@ -115,17 +115,17 @@ public class CupcakeMapper {
         try {
             Connection con = Connector.connection();
             String SQL = "SELECT product_id FROM cupcake.products WHERE product_name = ? AND type = \"Topping\"";
-            PreparedStatement ps = con.prepareStatement( SQL );
+            PreparedStatement ps = con.prepareStatement(SQL);
             ps.setString(1, productName);
             ResultSet rs = ps.executeQuery();
-            if ( rs.next() ) {
+            if (rs.next()) {
                 toppingID = rs.getInt("product_id");
                 return toppingID;
             } else {
                 return toppingID;
             }
 
-        } catch ( ClassNotFoundException | SQLException ex ) {
+        } catch (ClassNotFoundException | SQLException ex) {
             throw new LoginSampleException(ex.getMessage());
         }
     }

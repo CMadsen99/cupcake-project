@@ -1,10 +1,9 @@
 <title>Cupcake projekt</title>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@include file="../includes/headercostumer.inc"%>
+<%@include file="../includes/headercostumer.inc" %>
 
 
 <h1 class="text-center mt-4">Registrer her:</h1>
-
 
 
 <div class="row">
@@ -46,7 +45,8 @@
 
     <div class="col-lg-4"></div>
 
-</div>  <!-- row -->
+</div>
+<!-- row -->
 
 
-<%@include file="../includes/footer.jsp"%>
+<%@include file="../includes/footer.jsp" %>
