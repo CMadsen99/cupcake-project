@@ -26,7 +26,7 @@
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a style="color:white" ;="" class="nav-link" href="oderhistorycostumer.jsp">Order historik <span class="sr-only">(current)</span></a>
+            <a style="color:white" ;="" class="nav-link" href="FrontController?taget=orderViewCustomer&destination=orderHistoryCostumer">Ordre historik <span class="sr-only">(current)</span></a>
           </li>
              <%if ((session.getAttribute("email") != null)) { %>
                           <li style="color:white" class="nav-item dropdown">
@@ -34,7 +34,7 @@
                                    ${sessionScope.email}
                                  </a>
                                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                   <a style="color:red" class="dropdown-item" href="#">Logud</a>
+                                   <a style="color:red" class="dropdown-item" href="FrontController?taget=logout&destination=index">Logud</a>
                                  </div>
                                </li>
                   <% } else { %>

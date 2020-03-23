@@ -34,7 +34,7 @@ ${requestScope.msg}
     <input type="number" name="amount">
     <br>
 
-    <input type="submit" value="Submit">
+    <input type="submit" value="Tilføj">
 </form>
 
 <%@include file="../includes/footer.jsp" %>

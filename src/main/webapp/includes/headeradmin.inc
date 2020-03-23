@@ -33,7 +33,7 @@
                       ${sessionScope.email}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a style="color:red" class="dropdown-item" href="#">Logud</a>
+                      <a style="color:red" class="dropdown-item" href="FrontController?taget=logout&destination=index">Logud</a>
                     </div>
                   </li>
      <% } else { %>

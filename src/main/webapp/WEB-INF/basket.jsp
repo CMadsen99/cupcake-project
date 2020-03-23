@@ -27,7 +27,8 @@
     <th><h4>Antal</h4></th>
     <th><h4>Pris</h4></th>
     <th></th>
-    <c:forEach var="basket" items="${basket}">
+    <c:forEach var="basket" items="${basket}" varStatus="counter">
+
     <tr>
         <td>
             <li></li>
@@ -37,10 +38,11 @@
         <td>${basket.quantity} stk.</td>
         <td>${basket.price} kr.</td>
         <td>
-            <form name="editPage" action="FrontController" method="POST">
-                <input type="hidden" name="idEdit" value="remove">
+            <form name="removeBasketLine" action="FrontController" method="POST">
+                <input type="hidden" name="taget" value="removeBasketLine">
+                <input type="hidden" name="counter" value="${counter.index}">
 
-                <input type="submit" value="fjern denne cupcake">
+                <input type="submit" value="Fjern denne ordrelinje">
             </form>
         </td>
         </c:forEach>

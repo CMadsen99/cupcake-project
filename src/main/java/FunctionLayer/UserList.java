@@ -11,6 +11,7 @@ public class UserList {
     private static List<User> userList;
 
     public static void initUserList() {
+
         if (userList == null) {
             userList = new ArrayList<>();
             try {
