@@ -36,6 +36,8 @@
 
 <h1 class="text-center mt-4">Velkommen til Olskers Cupcakes</h1>
 
+<h2 class="text-centet mt-4">${requestScope.ordered}</h2>
+
 
 <form class="mt-4" name="cupcakeBasket" method="POST" action="FrontController">
     <input type="hidden" name="taget" value="cupcakeBasket">

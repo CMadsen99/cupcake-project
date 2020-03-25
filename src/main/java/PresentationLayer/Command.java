@@ -24,6 +24,8 @@ abstract class Command {
         commands.put("removeBasketLine", new RemoveBasketLine());
         commands.put("logout", new Logout());
         commands.put("orderViewCustomer", new OrderViewCustomer());
+        commands.put("deleteOrder", new DeleteOrder());
+        commands.put("orderViewAll", new OrderViewAll());
     }
 
     static Command from(HttpServletRequest request) {

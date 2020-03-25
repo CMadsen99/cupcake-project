@@ -46,6 +46,7 @@ public class PayOrder extends Command {
                 OrderMapper.insertOrderDetails(maxOrderID, toppingID, bottomID, quantity);
             }
 
+            request.setAttribute("ordered", "Ordren er bestilt!");
             session.removeAttribute("totalPrice");
             ((ArrayList<CakeOrder>) session.getAttribute("basket")).clear();
 

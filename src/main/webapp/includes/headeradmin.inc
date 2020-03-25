@@ -28,7 +28,7 @@
                       <a class="nav-link" href="FrontController?taget=redirect&destination=adminpage" style="color:white">Kundeoplysninger</a>
                     </li>
                     <li class="nav-item">
-                                <a class="nav-link" href="FrontController?taget=redirect&destination=signin" style="color:white">Ordrehistorik</a>
+                                <a class="nav-link" href="FrontController?taget=orderViewAll&destination=orderHistoryAllAdmin" style="color:white">Ordrehistorik</a>
                               </li>
             <%if ((session.getAttribute("email") != null)) { %>
              <li style="color:white" class="nav-item dropdown">

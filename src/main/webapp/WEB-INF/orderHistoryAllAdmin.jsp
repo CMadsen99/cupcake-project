@@ -1,3 +1,7 @@
+<%@ page import="FunctionLayer.Toppings" %>
+<%@ page import="FunctionLayer.Bottoms" %>
+<%@ page import="FunctionLayer.OrderList" %>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <title>Cupcake projekt</title>
 
@@ -11,7 +15,7 @@
         <%@include file="../includes/headercostumer.inc" %>
     </c:otherwise>
 </c:choose>
-<h1 class="text-center mt-4">Ordre historik</h1>
+
 
 <table class="table">
     <thead>
@@ -20,21 +24,31 @@
         <th scope="col">Bruger ID</th>
         <th scope="col">Ordrepris</th>
         <th scope="col">Status</th>
+        <th scope="col">Fjern</th>
     </tr>
     </thead>
     <tbody>
-    <c:forEach var="orderList" items="${sessionScope.orderList}">
-        <%!%>
+    <c:forEach var="orderList" items="${sessionScope.orderListAll}">
+
         <tr>
             <th scope="row">${orderList.order_id}</th>
             <td>${orderList.user_id}</td>
             <td>${orderList.cost}</td>
             <td>${orderList.paid}</td>
+            <td>
+                <form name="deleteOrder" action="FrontController" method="POST">
+                    <input type="hidden" name="taget" value="deleteOrder">
+                    <input type="hidden" name="idOrder" value="${orderList.order_id}">
+
+                    <input type="submit" value="Slet ordre">
+                </form>
+            </td>
+
         </tr>
     </c:forEach>
     </tbody>
 </table>
 
-<br>
 
 <%@include file="../includes/footer.jsp" %>
+

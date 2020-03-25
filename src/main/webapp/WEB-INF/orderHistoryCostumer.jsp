@@ -22,8 +22,8 @@
     <thead>
     <tr>
         <th scope="col">Ordre ID</th>
-        <th scope="col">Cost</th>
-        <th scope="col">Paid</th>
+        <th scope="col">Ordrepris</th>
+        <th scope="col">Status</th>
     </tr>
     </thead>
     <tbody>

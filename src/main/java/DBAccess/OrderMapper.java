@@ -35,6 +35,31 @@ public class OrderMapper {
         }
     }
 
+    public static ArrayList<Order> getAllOrders() throws LoginSampleException {
+        ArrayList<Order> orders = new ArrayList<>();
+        try {
+            Connection con = Connector.connection();
+            String SQL = "SELECT * FROM cupcake.orders";
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery(SQL);
+            while (rs.next()) {
+                int order_id = rs.getInt("order_id");
+                int user_id = rs.getInt("user_id");
+                int cost = rs.getInt("cost");
+                int sqlPaid = rs.getInt("paid");
+                String paid = "Ikke betalt";
+                if (sqlPaid > 0) {
+                    paid = "Betalt";
+                }
+                Order order = new Order(order_id, user_id, cost, paid);
+                orders.add(order);
+            }
+            return orders;
+        } catch (ClassNotFoundException | SQLException ex) {
+            throw new LoginSampleException(ex.getMessage());
+        }
+    }
+
     public static void insertOrder(Order order) throws LoginSampleException {
         boolean paid = false;
         try {
@@ -80,6 +105,30 @@ public class OrderMapper {
             }
             return orderID;
         } catch (ClassNotFoundException | SQLException ex) {
+            throw new LoginSampleException(ex.getMessage());
+        }
+    }
+
+    public static void deleteOrder(int orderID) throws LoginSampleException {
+        try {
+            Connection con = Connector.connection();
+            String SQL = "DELETE FROM cupcake.orders WHERE order_id = ?";
+            PreparedStatement ps = con.prepareStatement(SQL);
+            ps.setInt(1, orderID);
+            ps.executeUpdate();
+        } catch (SQLException | ClassNotFoundException ex) {
+            throw new LoginSampleException(ex.getMessage());
+        }
+    }
+
+    public static void deleteOrderDetails(int orderID) throws LoginSampleException {
+        try {
+            Connection con = Connector.connection();
+            String SQL = "DELETE FROM cupcake.order_details WHERE order_id = ?";
+            PreparedStatement ps = con.prepareStatement(SQL);
+            ps.setInt(1, orderID);
+            ps.executeUpdate();
+        } catch (SQLException | ClassNotFoundException ex) {
             throw new LoginSampleException(ex.getMessage());
         }
     }
